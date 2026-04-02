@@ -1,0 +1,39 @@
+{
+  "id": "chatcmpl-multi456",
+  "object": "chat.completion",
+  "created": 1700000000,
+  "model": "kimi-2.5",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Let me check the weather for both cities.",
+        "tool_calls": [
+          {
+            "id": "call_aaa111",
+            "type": "function",
+            "function": {
+              "name": "get_weather",
+              "arguments": "{\"city\": \"Tokyo\"}"
+            }
+          },
+          {
+            "id": "call_bbb222",
+            "type": "function",
+            "function": {
+              "name": "get_weather",
+              "arguments": "{\"city\": \"London\"}"
+            }
+          }
+        ]
+      },
+      "finish_reason": "tool_calls"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 60,
+    "completion_tokens": 40,
+    "total_tokens": 100
+  }
+}

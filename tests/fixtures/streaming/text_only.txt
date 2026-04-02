@@ -1,0 +1,13 @@
+data: {"id":"chatcmpl-stream1","object":"chat.completion.chunk","created":1700000000,"model":"kimi-2.5","choices":[{"index":0,"delta":{"role":"assistant","content":""},"finish_reason":null}]}
+
+data: {"id":"chatcmpl-stream1","object":"chat.completion.chunk","created":1700000000,"model":"kimi-2.5","choices":[{"index":0,"delta":{"content":"Hello"},"finish_reason":null}]}
+
+data: {"id":"chatcmpl-stream1","object":"chat.completion.chunk","created":1700000000,"model":"kimi-2.5","choices":[{"index":0,"delta":{"content":"!"},"finish_reason":null}]}
+
+data: {"id":"chatcmpl-stream1","object":"chat.completion.chunk","created":1700000000,"model":"kimi-2.5","choices":[{"index":0,"delta":{"content":" How"},"finish_reason":null}]}
+
+data: {"id":"chatcmpl-stream1","object":"chat.completion.chunk","created":1700000000,"model":"kimi-2.5","choices":[{"index":0,"delta":{"content":" can I help?"},"finish_reason":null}]}
+
+data: {"id":"chatcmpl-stream1","object":"chat.completion.chunk","created":1700000000,"model":"kimi-2.5","choices":[{"index":0,"delta":{},"finish_reason":"stop"}],"usage":{"prompt_tokens":10,"completion_tokens":5,"total_tokens":15}}
+
+data: [DONE]

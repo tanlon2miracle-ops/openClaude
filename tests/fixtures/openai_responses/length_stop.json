@@ -1,0 +1,21 @@
+{
+  "id": "chatcmpl-len000",
+  "object": "chat.completion",
+  "created": 1700000000,
+  "model": "kimi-2.5",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "This is a truncated resp"
+      },
+      "finish_reason": "length"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 30,
+    "completion_tokens": 4096,
+    "total_tokens": 4126
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "model": "claude-sonnet-4-20250514",
+  "max_tokens": 4096,
+  "messages": [
+    {
+      "role": "user",
+      "content": [
+        {"type": "text", "text": "Here's the result:"},
+        {"type": "tool_result", "tool_use_id": "toolu_abc123", "content": "72F and sunny"},
+        {"type": "text", "text": "What do you think?"}
+      ]
+    }
+  ]
+}

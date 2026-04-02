@@ -1,0 +1,35 @@
+server:
+  host: "0.0.0.0"
+  port: 8082
+  log_level: "info"       # debug | info | warning | error
+  debug_log: false        # log full request/response bodies
+
+backends:
+  - name: "kimi"
+    base_url: "https://api.moonshot.cn/v1"
+    api_key: "${KIMI_API_KEY}"   # env var reference
+    models:
+      - alias: "claude-sonnet-4-20250514"
+        target: "kimi-2.5"
+      - alias: "claude-haiku-4-5-20251001"
+        target: "kimi-2.5-mini"
+    capabilities:
+      tool_calling: true
+      vision: true
+      reasoning: false
+    timeout: 300
+
+  - name: "vllm-local"
+    base_url: "http://localhost:8000/v1"
+    api_key: "dummy"
+    models:
+      - alias: "claude-opus-4-6"
+        target: "qwen3-235b-a22b"
+    capabilities:
+      tool_calling: true
+      vision: false
+      reasoning: false
+    timeout: 600
+
+# First matching alias wins
+default_backend: "kimi"
