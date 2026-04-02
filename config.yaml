@@ -1,0 +1,24 @@
+server:
+  host: "0.0.0.0"
+  port: 8082
+  log_level: "info"
+  debug_log: false
+
+backends:
+  - name: "xcode"
+    base_url: "https://xcode.best/v1"
+    api_key: "sk-dfJxhCiQnq9uLrXpoXh7XJ6pIU1NJIZw0s6tJkkQoTqc0ZNc"
+    models:
+      - alias: "claude-sonnet-4-20250514"
+        target: "gpt-5.4"
+      - alias: "claude-haiku-4-5-20251001"
+        target: "gpt-5.4"
+      - alias: "claude-opus-4-6"
+        target: "gpt-5.4"
+    capabilities:
+      tool_calling: true
+      vision: true
+      reasoning: false
+    timeout: 600
+
+default_backend: "xcode"
